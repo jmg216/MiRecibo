@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Auditoría</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="assets/grunticon.loader.js"></script>
+    <script>
+        grunticon(["assets/icons.data.svg.css", "assets/icons.data.png.css", "assets/icons.fallback.css"],  grunticon.svgLoadedCallback);
+    </script>
+
+    <![if lt IE 9]>
+        <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+        <script src="../bower_components/Respond/src/respond.js"></script>
+    <![endif]>
+
+    <noscript>
+        <link href="custom/iconosetiquetas/test/icons.fallback.css" rel="stylesheet">
+    </noscript>
+
+
+
+</head>
+<body class="gestion-content">
+
+<div class="container">
+    <div class="navbar navegacion">
+        <div class="navbar-inner">
+            <a class="brand marcas" href="#"><img src="images/brand_small.png" alt="Mi recibo logo"/></a>
+            <!--<a class="brand marcas" href="#"><img src="images/brand_small_b.jpg" alt="Logo B"/></a>-->
+
+            <ul class="nav pull-right">
+                <li><a href="#">IndustriaSWAG S.A.</a></li>
+                <li><a href="#">Eduardo Muñoz</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configuración <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="registro-datos.html">Registro de datos</a></li>
+                        <li><a href="nuevo-empleado.html">Empleados</a></li>
+                        <li><a href="configuracion-recibos.html">Config. de Recibos</a></li>
+                        <li><a href="auditoria.html">Auditoría</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="block-content">
+    <!-- contenedor-->
+    <div class="contenedor fixed-height">
+
+        <div class="content-main">
+
+            <div class="content-main__controls clearfix">
+
+                <h2>Auditoría</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dignissimos eligendi molestiae, quam quasi quisquam reprehenderit. Commodi, cum, delectus dicta doloremque dolorum ea eligendi, illo maiores molestias mollitia optio tempora!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi labore laborum mollitia nesciunt quaerat ratione velit. Dolorum, ipsa modi?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, sequi, velit? Itaque porro sint tempora voluptate? Impedit itaque laudantium necessitatibus ratione? Culpa doloremque, fugiat fugit laudantium quae sint tenetur ut. Dolore odio placeat recusandae.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid assumenda commodi debitis deserunt error est hic inventore ipsum maiores maxime minus porro praesentium quibusdam quisquam reiciendis repudiandae sapiente sunt temporibus, vitae? Blanditiis cumque delectus iure quos sunt tenetur. Amet consequuntur dolores dolorum placeat porro praesentium quidem, sapiente. Facere hic impedit ipsam ipsum numquam odio quae totam, unde voluptas! Atque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis deserunt eveniet ipsum itaque, iure maxime modi nihil officia officiis porro quae quasi, recusandae reiciendis repellat ullam unde vitae. Beatae consequuntur illo laborum sunt ullam. Beatae delectus inventore magnam odio, repellat repellendus. Consectetur cum dolorum et facere facilis magnam, recusandae.</p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- contenedor-->
+</div>
+
+
+
+<!-- Button to trigger modal -->
+<!--<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>-->
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade lote-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 class="lote-modal__title">Nuevo: <span>Lote de recibos: 1508-L002</span></h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="lote-modal__content">
+            <span>Fecha de carga: 28/09/2015</span>
+            <span>Descripción: Ajustes 1</span>
+
+            <div class="lote-modal__adj">
+
+                <h3 class="lote-modal__subtitle">Carpeta con recibos a importar:</h3>
+                <div class="input-prepend">
+                    <button class="btn" type="button"><i class="icon-folder-open"></i> Seleccionar</button>
+                    <input class="span4" id="appendedInputButton" type="text">
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="modal-footer clearfix">
+        <a class="btn-light-blue pull-left">Importar</a>
+        <a class="btn-light-blue-line pull-right" data-dismiss="modal" aria-hidden="true">Cancelar</a>
+    </div>
+</div>
+
+
+<!-- Button to trigger modal -->
+<!--<a href="#cargaModal" role="button" class="btn" data-toggle="modal">Cargar pdf</a>-->
+
+<!-- Modal -->
+<div id="cargaModal" class="modal hide fade lote-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 class="lote-modal__title"><span>Lote de recibos: 1508-L002</span></h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="lote-modal__content">
+            <span>Se enviará un recordatorio a los empleados que aún no han firmado los recibos de este lote.</span>
+        </div>
+
+    </div>
+    <div class="modal-footer clearfix">
+        <a class="btn-light-blue pull-left">Publicar</a>
+        <a class="btn-light-blue-line pull-right" data-dismiss="modal" aria-hidden="true">Cancelar</a>
+    </div>
+</div>
+
+
+<!-- Button to trigger modal -->
+<!--<a href="#importarModal" role="button" class="btn" data-toggle="modal">Importar</a>-->
+
+<!-- Modal -->
+<div id="importarModal" class="modal hide fade lote-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 class="lote-modal__title"><span>Nuevo Lote de recibos: 1508-L002</span></h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="lote-modal__content">
+            <span>Fecha de carga: 28/09/2015</span>
+            <span>Descripción: </span>
+            <textarea></textarea>
+            <span>Carpeta con recibos a importar:</span>
+            <input style="width: 100%" placeholder="C:\Users\Usuario\Documents\mirecibo\2015\importar\" type="text"/>
+        </div>
+
+    </div>
+    <div class="modal-footer clearfix">
+        <a href="lotes-importado.html" class="btn-light-blue pull-left">Importar</a>
+        <a class="btn-light-blue-line pull-right" data-dismiss="modal" aria-hidden="true">Cancelar</a>
+    </div>
+</div>
+
+
+
+
+
+
+    <footer>
+        <div class="footer padding-section--med">
+            <div class="contenedor">
+                <div class="col__third-four">
+                    <a href="mailto:contacto@mirecibo.uy">contacto@mirecibo.uy</a><br>
+                    <span>Bulevar España 2094, Montevideo, 11200 Uruguay.</span><br>
+                    <span>Teléfono/Fax: +598 2419 4600</span><br>
+                    <span class="bottom-brand">
+                        <img src="images/brand-white.png" alt="Mi Recibo"/><br/>
+                    </span>
+                    <span class="copy">© 2015 - mirecibo.uy - Todos los derechos reservados</span>
+                </div>
+
+                <div class="col__cuart text-right">
+                    <span class="consulta">Enviar consulta</span>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+<section>
+    <div class="container">
+        <div class="pull-right logo-bottom">
+            <img src="images/isa_small.png" alt="Logo Isa"/>
+        </div>
+    </div>
+</section>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js" ></script>
+    <script src="js/plugins.concat.js"></script>
+    <script src="js/app.js"></script>
+
+<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

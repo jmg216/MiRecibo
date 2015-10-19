@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Recibo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="assets/grunticon.loader.js"></script>
+    <script>
+        grunticon(["assets/icons.data.svg.css", "assets/icons.data.png.css", "assets/icons.fallback.css"],  grunticon.svgLoadedCallback);
+    </script>
+
+    <![if lt IE 9]>
+        <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+        <script src="../bower_components/Respond/src/respond.js"></script>
+    <![endif]>
+
+    <noscript>
+        <link href="custom/iconosetiquetas/test/icons.fallback.css" rel="stylesheet">
+    </noscript>
+
+
+
+</head>
+<body class="gestion-content">
+
+<div class="container">
+    <div class="navbar navegacion">
+        <div class="navbar-inner">
+            <a class="brand marcas" href="#"><img src="images/brand_small.png" alt="Mi recibo logo"/></a>
+            <!--<a class="brand marcas" href="#"><img src="images/brand_small_b.jpg" alt="Logo B"/></a>-->
+
+            <ul class="nav pull-right">
+                <li><a href="#">IndustriaSWAG S.A.</a></li>
+                <li><a href="#">Eduardo Muñoz</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configuración <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="registro-datos.html">Registro de datos</a></li>
+                        <li><a href="nuevo-empleado.html">Empleados</a></li>
+                        <li><a href="configuracion-recibos.html">Config. de Recibos</a></li>
+                        <li><a href="auditoria.html">Auditoría</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="block-content">
+    <!-- contenedor-->
+    <div class="contenedor fixed-height">
+        <div class="header-content clearfix">
+            <div class="col__half">
+                <h2 class="header-content__title">Recibo</h2>
+            </div>
+        </div>
+
+
+        <div class="primerCol">
+
+            <h3 class="title__side">Firma de Empleador</h3>
+            <h4 class="title__comboBlock">Datos de firma</h4>
+
+            <div class="select-grupos">
+                <select class="select-custom" style="width:100%">
+                    <option value="">IndustriaSWAG S.A., RUC 80058932-1</option>
+                    <option value="">Eduardo Muñoz, C.I. 3274969</option>
+					 <option value="">Otro...</option>
+                </select>
+            </div>
+
+
+            <div class="select-grupos">
+                <select class="select-custom" style="width:100%">
+                    <option value="">Empleador</option>
+                    <option value="">Representante o apoderado de empleador</option>
+					<option value="">(no especificado) </option>
+					<option value="">Otro...</option>
+                </select>
+            </div>
+
+            <div class="select-grupos">
+                <select class="select-custom" style="width:100%">
+                    <option value="">Prueba de Emisión</option>
+					<option value="">(no especificado) </option>
+					<option value="">Otro...</option>
+                </select>
+            </div>
+
+            <div class="select-grupos">
+                <select class="select-custom" style="width:100%">
+                    <option value="">Montevideo, Uruguay</option>
+                    <option value="">Uruguay</option>
+					<option value="">Otro...</option>
+  					</select>
+            </div>
+
+            <div class="select-grupos">
+                <h4 class="title__comboBlock">Apariencia de firma</h4>
+                <select class="select-custom" style="width:100%">
+                    <option value="">Apariencia de firma estándar</option>
+                     <option value="">Sin apariencia</option>
+                     <option value="">Otra...</option>
+                </select>
+            </div>
+
+            <div class="tab-controls">
+                <a href="configuracion-recibos.html" class="btn-light-blue">Guardar cambios</a>
+                <a href="configuracion-recibos.html" class="btn-light-blue-line" data-dismiss="modal" aria-hidden="true">Cancelar</a>
+            </div>
+
+
+
+        </div>
+
+        <div class="secondCol">
+
+            <div class="visor text-center">
+
+                <img src="pdfs/recibo-blanco.jpg" alt=""/>
+
+                <div class="firma-area clearfix">
+
+                    <div class="l-firma firma-block" data-area="left"></div>
+                    <div class="c-firma firma-block" data-area="center"></div>
+                    <div class="r-firma firma-block" data-area="right"></div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="tercerCol">
+
+            <h3 class="title__side">Detalles de apariencia de firma:</h3>
+            <h4 class="title__comboBlock">Apariencia estándar</h4>
+
+            <div class="select-grupos">
+                <select id="cargarInfo" class="select-custom" style="width:100%">
+                    <option value="Nombre, cédula o ruc, rol, motivo de firma, lugar">Texto</option>
+                    <option value="Imagen">Imagen</option>
+                </select>
+                <div class="result-apariencia">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="select-grupos existe-imagen">
+                <select id="cargarImagen" class="select-custom" style="width:100%">
+                    <option value="sello">Imagen de sello/logo de empresa</option>
+                   <option value="sinimagen">Otra imagen...</option>
+                </select>
+                <div class="result-sello">
+                    <span class="helper"></span>
+                    <img src="images/sello-dummy.jpg" alt="Sello"/>
+                </div>                
+            </div>
+
+            <div class="select-grupos">
+                <select id="cargarRecuadro" class="select-custom" style="width:100%">
+                    <option value="normal">Tamaño:Normal</option>
+                    <option value="med">Tamaño:Mediano</option>
+                    <option value="peq">Tamaño:Pequeño</option>
+                   <option value="peq">Otro...</option>
+                </select>
+                <div class="result-recuadro">
+
+                    <div class="recuadro">
+                        <div class="r-sm" data-size="r-sm"></div>
+                    </div>
+                    <div class="recuadro">
+                        <div class="r-md" data-size="r-md"></div>
+                    </div>
+                    <div class="recuadro">
+                        <div class="r-lg" data-size="r-lg"></div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- contenedor-->
+</div>
+
+
+
+<!-- Button to trigger modal -->
+<!--<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>-->
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade lote-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 class="lote-modal__title">Nuevo: <span>Lote de recibos: 1508-L002</span></h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="lote-modal__content">
+            <span>Fecha de carga: 28/09/2015</span>
+            <span>Descripción: Ajustes 1</span>
+
+            <div class="lote-modal__adj">
+
+                <h3 class="lote-modal__subtitle">Carpeta con recibos a importar:</h3>
+                <div class="input-prepend">
+                    <button class="btn" type="button"><i class="icon-folder-open"></i> Seleccionar</button>
+                    <input class="span4" id="appendedInputButton" type="text">
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="modal-footer clearfix">
+        <a class="btn-light-blue pull-left">Importar</a>
+        <a class="btn-light-blue-line pull-right" data-dismiss="modal" aria-hidden="true">Cancelar</a>
+    </div>
+</div>
+
+<!--<a class="btn btn-primary view-pdf" href="http://www.bodossaki.gr/userfiles/file/dummy.pdf">View PDF</a>-->
+
+
+
+
+
+
+<footer>
+    <div class="footer padding-section--med">
+        <div class="contenedor">
+            <div class="col__third-four">
+                <a href="mailto:contacto@mirecibo.uy">contacto@mirecibo.uy</a><br>
+                <span>Bulevar España 2094, Montevideo, 11200 Uruguay.</span><br>
+                <span>Teléfono/Fax: +598 2419 4600</span><br>
+                    <span class="bottom-brand">
+                        <img src="images/brand-white.png" alt="Mi Recibo"/><br/>
+                    </span>
+                <span class="copy">© 2015 - mirecibo.uy - Todos los derechos reservados</span>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+
+<section>
+
+    <div class="container">
+        <div class="pull-right logo-bottom">
+            <img src="images/isa_small.png" alt="Logo Isa"/>
+        </div>
+    </div>
+
+</section>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js" ></script>
+<script src="js/plugins.concat.js"></script>
+<script src="js/modalplugin.js"></script>
+<script src="js/app.js"></script>
+
+<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

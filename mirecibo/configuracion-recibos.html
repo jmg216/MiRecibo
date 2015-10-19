@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Configuración Recibos</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="assets/grunticon.loader.js"></script>
+    <script>
+        grunticon(["assets/icons.data.svg.css", "assets/icons.data.png.css", "assets/icons.fallback.css"],  grunticon.svgLoadedCallback);
+    </script>
+
+    <![if lt IE 9]>
+        <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+        <script src="../bower_components/Respond/src/respond.js"></script>
+    <![endif]>
+
+    <noscript>
+        <link href="custom/iconosetiquetas/test/icons.fallback.css" rel="stylesheet">
+    </noscript>
+
+
+
+</head>
+<body class="gestion-content">
+
+<div class="container">
+    <div class="navbar navegacion">
+        <div class="navbar-inner">
+            <a class="brand marcas" href="lotes.html"><img src="images/brand_small.png" alt="Mi recibo logo"/></a>
+            <!--<a class="brand marcas" href="#"><img src="images/brand_small_b.jpg" alt="Logo B"/></a>-->
+
+            <ul class="nav pull-right">
+                <li><a href="#">IndustriaSWAG S.A.</a></li>
+                <li><a href="#">Eduardo Muñoz</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configuración <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="registro-datos.html">Registro de datos</a></li>
+                        <li><a href="nuevo-empleado.html">Empleados</a></li>
+                        <li><a href="configuracion-recibos.html">Config. de Recibos</a></li>
+                        <li><a href="auditoria.html">Auditoría</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="block-content">
+    <!-- contenedor-->
+    <div class="contenedor fixed-height">
+
+        <div class="header-content clearfix">
+            <div class="col__half">
+                <h2 class="header-content__title">Configuración Recibos</h2>
+            </div>
+
+            <div class="col__half">
+                <form class="form-search text-right">
+                    <input type="text" class="input-medium span3 search-query">
+                    <div class="btn-group">
+                        <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">Búsqueda avanzada <span class="caret"></span></button>
+                        <!--<ul class="dropdown-menu pull-right">-->
+                            <!--<li><a href="#">Action</a></li>-->
+                            <!--<li><a href="#">Another action</a></li>-->
+                            <!--<li><a href="#">Something else here</a></li>-->
+                            <!--<li class="divider"></li>-->
+                            <!--<li><a href="#">Separated link</a></li>-->
+                        <!--</ul>-->
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+
+        <div class="content-main tab-custom">
+
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#formatoRecibos" data-toggle="tab">Formato de recibos</a></li>
+                <li><a href="#firmasFormato" data-toggle="tab">Formato de firmas en recibos</a></li>
+            </ul>
+
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="formatoRecibos">
+
+                    <form class="clearfix">
+
+                        <div class="col__half">
+
+                            <p>
+                                <label for="text_field" class="login__label">Importación de recibos</label>
+                                <div class="btn-group">
+                                    <button class="btn btn-block dropdown-toggle" data-toggle="dropdown">Recibos en archivos PDF - un recibo por archivo <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Recibos en archivos PDF - un recibo por archivo</a></li>
+                                        <li><a href="#">Lista de recibos en archivo de texto CSV - campos separados por coma</a></li>
+                                        <li><a href="#">Consultar por otros formatos</a></li>
+                                    </ul>
+                                </div>
+                            </p>
+                        </div>
+
+                        <div class="col__half">
+                            <p>
+                                <label for="text_field" class="login__label">Formato de nombre de archivos con metadatos</label>
+                                <input id="text_field" type="text" placeholder="numero-fecha-cedula-nombre.pdf">
+                            </p>
+                        </div>
+
+
+                        <div style="clear: both;">
+                            <hr>
+                        </div>
+
+                        <div class="col__half">
+
+                            <p>
+                                <label for="text_field" class="login__label">Origen de lotes:</label>
+                            <div class="btn-group">
+                                <button class="btn btn-block dropdown-toggle" data-toggle="dropdown">Carpeta de filesystem local <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Carpeta de filesystem local</a></li>                        
+                                    <li><a href="#">Payroll 10</a></li>                                   
+									<li><a href="#">Consultar por otros orígenes de lotes</a></li>
+                                </ul>
+                            </div>
+                            </p>
+                        </div>
+
+                        <div class="col__half">
+                            <p>
+                                <label for="text_field" class="login__label">Carpeta por defecto</label>
+                                <input id="text_field" type="text" placeholder="C:\Users\Usuario\Documents\mirecibo\2015\importar">
+                            </p>
+                        </div>
+
+                        <div style="clear: both;">
+                            <hr>
+                        </div>
+
+                        <div class="col__full">
+                            <label for="text_field" class="login__label">Ejemplo de formato:</label>
+                            <a class="btn-light-blue-line" data-dismiss="modal" aria-hidden="true">Importar Recibo de prueba</a>
+                        </div>
+
+                    </form>
+
+                    <div class="tab-controls col__full">
+                        <a class="btn-light-blue">Guardar cambios</a>
+                        <a class="btn-light-blue-line" data-dismiss="modal" aria-hidden="true">Cancelar</a>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane" id="firmasFormato">
+
+                    <form class="clearfix">
+
+
+                            <label for="text_field" class="login__label">Firma de Empleador</label>
+
+
+                        <div class="col__quint">
+
+                            <div class="btn-group">
+
+                                    <button class="btn btn-block dropdown-toggle" data-toggle="dropdown">La empresa firmará digitalmente los recibos <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">La empresa firmará digitalmente los recibos</a></li>
+                                         <li><a href="#">La empresa no firmará digitalmente los recibos</a></li>
+                                        <li><a href="#">Es opcional que la empresa firme los recibos</a></li>
+                                    </ul>
+
+                            </div>
+
+                         </div>
+
+
+                        <div class="col__cuart">
+                            <a  href="recibo.html" class="btn-light-blue">Formato de firma de empresa</a>
+
+                        </div>
+
+
+
+                        <div class="col__third">
+
+                            <a  class="btn-light-blue-line" data-dismiss="modal" aria-hidden="true">Firmar Recibo de prueba como empresa</a>
+                        </div>
+
+                        <div style="clear: both;">
+
+
+                        </div>
+                        <hr>
+
+
+                        <label for="text_field" class="login__label">Firma del Empleado</label>
+
+
+                        <div class="col__quint">
+
+
+
+                            <div class="btn-group">
+
+                                    <button class="btn btn-block dropdown-toggle" data-toggle="dropdown">El empleado debe firmar digitalmente su recibo <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                       <li><a href="#">El empleado debe firmar digitalmente su recibo</a></li>
+                                         <li><a href="#">El empleado no firmará digitalmente su recibo</a></li>
+                                        <li><a href="#">Es opcional que el empleado firme su recibo</a></li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col__cuart">
+
+
+                                <a  href="recibo-empleado.html" class="btn-light-blue">Formato de firma empleado</a>
+
+                        </div>
+
+
+
+                        <div class="col__third">
+
+                            <a class="btn-light-blue-line" data-dismiss="modal" aria-hidden="true">Firmar Recibo de prueba como empleado</a>
+                        </div>
+
+                        <div style="clear: both;"></div>
+
+
+                    </form>
+
+                    <div class="tab-controls col__full">
+                        <a class="btn-light-blue">Guardar cambios</a>
+                        <a class="btn-light-blue-line" data-dismiss="modal" aria-hidden="true">Cancelar</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- contenedor-->
+</div>
+
+
+
+<!-- Button to trigger modal -->
+<!--<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>-->
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade lote-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 class="lote-modal__title">Nuevo: <span>Lote de recibos: 1508-L002</span></h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="lote-modal__content">
+            <span>Fecha de carga: 28/09/2015</span>
+            <span>Descripción: Ajustes 1</span>
+
+            <div class="lote-modal__adj">
+
+                <h3 class="lote-modal__subtitle">Carpeta con recibos a importar:</h3>
+                <div class="input-prepend">
+                    <button class="btn" type="button"><i class="icon-folder-open"></i> Seleccionar</button>
+                    <input class="span4" id="appendedInputButton" type="text">
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="modal-footer clearfix">
+        <a class="btn-light-blue pull-left">Importar</a>
+        <a class="btn-light-blue-line pull-right" data-dismiss="modal" aria-hidden="true">Cancelar</a>
+    </div>
+</div>
+
+
+
+
+
+
+    <footer>
+        <div class="footer padding-section--med">
+            <div class="contenedor">
+                <div class="col__third-four">
+                    <a href="mailto:contacto@mirecibo.uy">contacto@mirecibo.uy</a><br/>
+                    <span>Bulevar España 2094, Montevideo, Uruguay.</span><br/>
+                    <span>Teléfono/Fax: +598 2419 4600</span><br/>
+                    <span class="bottom-brand">
+                        <img src="images/brand-white.png" alt="Mi Recibo"/><br/>
+                    </span>
+                    <span class="copy">© 2015 - mirecibo.uy - Todos los derechos reservados</span>
+                </div>
+                <div class="col__cuart text-right">
+                    <span class="consulta">Enviar consulta</span>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+<section>
+
+    <div class="container">
+        <div class="pull-right logo-bottom">
+            <img src="images/isa_small.png" alt="Logo Isa"/>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js" ></script>
+    <script src="js/plugins.concat.js"></script>
+    <script src="js/app.js"></script>
+
+<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

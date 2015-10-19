@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Regitro de Datos</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/plugins.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="assets/grunticon.loader.js"></script>
+    <script>
+        grunticon(["assets/icons.data.svg.css", "assets/icons.data.png.css", "assets/icons.fallback.css"],  grunticon.svgLoadedCallback);
+    </script>
+
+    <![if lt IE 9]>
+        <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+        <script src="../bower_components/Respond/src/respond.js"></script>
+    <![endif]>
+
+    <noscript>
+        <link href="custom/iconosetiquetas/test/icons.fallback.css" rel="stylesheet">
+    </noscript>
+
+
+
+</head>
+<body class="gestion-content">
+
+<div class="container">
+    <div class="navbar navegacion">
+        <div class="navbar-inner">
+            <a class="brand marcas" href="lotes.html"><img src="images/brand_small.png" alt="Mi recibo logo"/></a>
+            <!--<a class="brand marcas" href="#"><img src="images/brand_small_b.jpg" alt="Logo B"/></a>-->
+
+            <ul class="nav pull-right">
+                <li><a href="#">IndustriaSWAG S.A.</a></li>
+                <li><a href="#">Eduardo Muñoz</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configuración <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="registro-datos.html">Registro de datos</a></li>
+                        <li><a href="nuevo-empleado.html">Empleados</a></li>
+                        <li><a href="configuracion-recibos.html">Config. de Recibos</a></li>
+                        <li><a href="#">Auditoría</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="block-content">
+    <!-- contenedor-->
+    <div class="contenedor fixed-height">
+
+        <div class="header-content clearfix">
+            <div class="col__half">
+                <h2 class="header-content__title">Registro de Datos</h2>
+            </div>
+
+            <div class="col__half">
+                <form class="form-search text-right">
+                    <input type="text" class="input-medium span3 search-query">
+                    <div class="btn-group">
+                        <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">Búsqueda avanzada <span class="caret"></span></button>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+
+        <div class="content-main tab-custom">
+
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#datosEmpresa" data-toggle="tab">Datos de la empresa</a></li>
+                <li><a href="#datosAdmin" data-toggle="tab">Datos del administrador</a></li>
+            </ul>
+
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="datosEmpresa">
+
+                        <div class="col__sept">
+
+                            <form class="login__form--padded">
+                                <!--<h2 class="login__title">Iniciar sesión</h2>-->
+                                <p>
+                                    <label for="text_field" class="login__label">Razón Social</label>
+                                    <input id="text_field" type="text" placeholder="IndustriaSWAG S.A.">
+                                </p>
+                                <p>
+                                    <label for="text_field" class="login__label">Dirección</label>
+                                    <input id="text_field" type="password" placeholder="Carmen del Pozo 321, Montevideo, Uruguay.">
+                                </p>
+
+                                <p>
+                                    <label for="text_field" class="login__label">RUC</label>
+                                    <input id="text_field" type="password" placeholder="80058932-1">
+                                </p>
+
+                            </form>
+                        </div>
+
+                        <div class="col__quint border-left vert-center">
+                            <div class="firts-time vert-center-item">
+
+                                <p>
+                                    <span class="logo__name">Logo</span>
+                                </p>
+                                <div class="logo__content">
+                                    <img src="images/logo-change.jpg" alt="Logo actual"/>
+                                    <p>
+                                        <a type="button" class="btn-light-blue">Cambiar logo</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    <div class="tab-controls col__full">
+                        <a class="btn-light-blue">Guardar cambios</a>
+                        <a class="btn-light-blue-line" data-dismiss="modal" aria-hidden="true">Cancelar</a>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane" id="datosAdmin">
+
+                    <div class="col__half">
+
+                        <form class="">
+                            <!--<h2 class="login__title">Iniciar sesión</h2>-->
+                            <p>
+                                <label for="text_field" class="login__label">Nombre</label>
+                                <input id="text_field" type="text" placeholder="Eduardo Muñoz">
+                            </p>
+                            <p>
+                                <label for="text_field" class="login__label">Email</label>
+                                <input id="text_field" type="email" placeholder="emunoz@industriaswag.com">
+                            </p>
+
+                            <p>
+                                <label for="text_field" class="login__label">Contraseña</label>
+                                <input id="text_field" type="password">
+                            </p>
+
+                            <p>
+                                <label for="text_field" class="login__label">Confirmación</label>
+                                <input id="text_field" type="text" placeholder="Ingrese el texto de la imagen">
+                            </p>
+
+                        </form>
+                    </div>
+
+                    <div class="col__half border-left vert-center">
+                        <div class="firts-time vert-center-item">
+
+                            <p>
+                                <label for="text_field" class="login__label">CI</label>
+                                <input id="text_field" type="text" placeholder="3274969">
+                            </p>
+                            <p>
+                                <label for="text_field" class="login__label">Teléfono móvil</label>
+                                <input id="text_field" type="tel" placeholder="0971208699">
+                            </p>
+
+                            <p>
+                                <label for="text_field" class="login__label">Repetir Contraseña</label>
+                                <input id="text_field" type="password">
+                            </p>
+
+                            <p>
+                                <img src="images/captcha.jpg" alt="cc"/>
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col__full">
+                        <p>
+                            <label for="text_field" class="login__label">Certificado digital de administrador</label>
+                            <input id="text_field" type="text" style="width: 80%" placeholder="Eduardo Muñoz, CI 3274969, Emitido por eFIRMA">
+                            <a class="btn-light-blue">Seleccionar</a>
+                        </p>
+                    </div>
+
+                    <div class="tab-controls col__full">
+                        <a class="btn-light-blue">Guardar cambios</a>
+                        <a class="btn-light-blue-line" data-dismiss="modal" aria-hidden="true">Cancelar</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- contenedor-->
+</div>
+
+
+
+<!-- Button to trigger modal -->
+<!--<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>-->
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade lote-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 class="lote-modal__title">Nuevo: <span>Lote de recibos: 1508-L002</span></h3>
+    </div>
+    <div class="modal-body">
+
+        <div class="lote-modal__content">
+            <span>Fecha de carga: 06/08/2015</span>
+            <span>Descripción: Ajustes 1</span>
+
+            <div class="lote-modal__adj">
+
+                <h3 class="lote-modal__subtitle">Carpeta con recibos a importar:</h3>
+                <div class="input-prepend">
+                    <button class="btn" type="button"><i class="icon-folder-open"></i> Seleccionar</button>
+                    <input class="span4" id="appendedInputButton" type="text">
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="modal-footer clearfix">
+        <a class="btn-light-blue pull-left">Importar</a>
+        <a class="btn-light-blue-line pull-right" data-dismiss="modal" aria-hidden="true">Cancelar</a>
+    </div>
+</div>
+
+
+
+    <footer>
+        <div class="footer padding-section--med">
+            <div class="contenedor">
+                <div class="col__third-four">
+                    <a href="mailto:contacto@mirecibo.uy">contacto@mirecibo.uy</a><br>
+                    <span>Bulevar España 2094, Montevideo, 11200 Uruguay.</span><br>
+                    <span>Teléfono/Fax: +598 2419 4600</span><br>
+                    <span class="bottom-brand">
+                        <img src="images/brand-white.png" alt="Mi Recibo"/><br/>
+                    </span>
+                    <span class="copy">© 2015 - mirecibo.uy - Todos los derechos reservados</span>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+<section>
+
+    <div class="container">
+        <div class="pull-right logo-bottom">
+            <img src="images/isa_small.png" alt="Logo Isa"/>
+        </div>
+    </div>
+
+</section>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js" ></script>
+<script src="js/plugins.concat.js"></script>
+<script src="js/modalplugin.js"></script>
+<script src="js/app.js"></script>
+
+<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>
